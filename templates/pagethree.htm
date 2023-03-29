@@ -1,0 +1,29 @@
+<p>{{msgStrs 'pageThreetext'}}</p>
+
+<div class="table">
+	<div class="table-header">
+		<div class="table-row">
+			<div class="table-col fn">{{msgStrs 'firstname'}}</div>
+			<div class="table-col ln">{{msgStrs 'lastname'}}</div>
+			<div class="table-col pl">{{msgStrs 'place'}}</div>
+			<div class="table-col actions"></div>
+		</div>
+	</div>
+	<div class="table-body">
+		{{#each this}}
+		<div class="table-row">
+			<div class="table-col fn legend">{{msgStrs 'firstname'}}</div>
+			<div class="table-col fn"><a href="#" data-username="{{username}}" data-created="{{created}}" data-createdby="{{createdBy}}" data-modified="{{modified}}" data-modifiedby="{{modifiedBy}}">{{{firstName}}}</a></div>
+			<div class="table-col ln legend">{{msgStrs 'lastname'}}</div>
+			<div class="table-col ln"><a href="#" data-username="{{username}}" data-created="{{created}}" data-createdby="{{createdBy}}" data-modified="{{modified}}" data-modifiedby="{{modifiedBy}}">{{{lastName}}}</a></div>
+			<div class="table-col pl legend">{{msgStrs 'place'}}</div>
+			<div class="table-col pl"><a href="#" data-placeid="{{location.id}}">{{location.name}}</a></div>
+			<div class="table-col actions legend"></div>
+			<div class="table-col actions">
+				<a href="#" data-action="edit" data-username="{{username}}" title="Edit"><img src="./images/icn-edit.png" alt="Edit" /></a>
+				<a href="#" data-action="delete" data-username="{{username}}" title="Delete"><img src="./images/icn-delete.png" alt="Delete" /></a>
+			</div>
+		</div>
+		{{/each}}
+	</div>
+</div>

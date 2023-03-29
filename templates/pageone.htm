@@ -1,0 +1,19 @@
+<p>{{msgStrs 'pageOnetext'}}</p>
+<table>
+	<thead>
+		<tr>
+			<th class="fn">{{msgStrs 'firstname'}}</th>
+			<th class="ln">{{msgStrs 'lastname'}}</th>
+			<th class="created">{{msgStrs 'created'}}</th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#each this}}
+			<tr>
+				<td class="fn"><a href="#">{{{firstName}}}</a></td>
+				<td class="ln"><a href="#">{{{lastName}}}</a></td>
+				<td class="created">{{formatDate created false }}</td>
+			</tr>
+		{{/each}}
+	</tbody>
+</table>

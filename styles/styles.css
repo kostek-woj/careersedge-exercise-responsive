@@ -1,0 +1,228 @@
+html,
+body {
+	margin: 0 auto;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+	display: block;
+	height: 0;
+	visibility: hidden;
+	overflow: hidden;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+nav {
+	background: #2f305a;
+	line-height: 30px;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0 auto;
+	max-width: 1024px;
+	padding: 0;
+	width: 90%;
+}
+
+nav ul li {
+	display: inline-block;
+	vertical-align: middle;
+	width: 100px;
+}
+
+nav ul li a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+nav ul li a:hover,
+nav ul li a.current {
+	color: #f5991c;
+}
+
+.content {
+	margin: 0 auto;
+	width: 90%;
+}
+
+.loadingImg {
+	margin: 20px auto;
+	display: block;
+}
+
+p {
+	margin: 20px 0;
+}
+
+table {
+	width: 100%;
+	border: 0;
+}
+
+table th {
+	text-align: left;
+}
+
+table th,
+table td {
+	padding-left: 10px;
+}
+
+table th:first-child,
+table td:first-child {
+	padding-left: 0;
+}
+
+table tr.row-actions:hover {
+	background-color: #eee;
+}
+
+table tr.row-actions a img {
+	visibility: hidden;
+}
+
+table tr.row-actions:hover a img {
+	visibility: visible;
+}
+
+/* Responsive Table */
+
+.content {
+	margin: 0 auto;
+	max-width: 1024px;
+	width: 90%;
+}
+
+.table-header {
+	display: none;
+}
+
+.table-row:first-child {
+	border-top: 1px solid #2f305a;
+}
+
+.table-row {
+	border-bottom: 1px solid #2f305a;
+	display: flex;
+	flex-wrap: wrap;
+	padding: .5rem 0;
+}
+
+.table-row:hover {
+	background-color: #f5991c33;
+}
+
+.table-row .table-col.actions a {
+	display: none;
+}
+
+.table-row:hover .table-col.actions a {
+	display: inline-block;
+}
+
+.table-col {
+	padding-bottom: .75rem;
+	width: 50%;
+}
+
+.table-col.pl {
+	padding-bottom: .5rem;
+}
+
+.table-col.legend {
+	display: block;
+}
+
+.legend:not(:empty)::after {
+	content: ':';
+}
+
+.table-col.actions {
+	display: flex;
+	justify-content: center;
+	padding: 0;
+	width: 100%;
+}
+
+.actions img {
+	padding: 1rem 1rem 0;
+}
+
+.actions.legend {
+	display: none;
+}
+
+.tooltip p {
+	font-size: .75rem;
+	margin: 0;
+	padding-bottom: .25rem;
+}
+
+.tooltip p:last-child {
+	padding-bottom: 0;
+}
+
+.tooltip p span {
+	font-weight: 600;
+}
+
+@media screen and (min-width: 480px) {
+	.table-header {
+		display: flex;
+	}
+
+	.table-header .table-row,
+	.table-header .table-row:hover {
+		background-color: #2f305a;
+		color: #fff;
+	}
+
+	.table-header .table-col {
+		font-weight: 600;
+	}
+
+	.table-row {
+		display: flex;
+		flex-wrap: nowrap;
+		width: 100%;
+	}
+
+	.table-col {
+		align-items: center;
+		display: flex;
+		font-weight: 400;
+		padding: .5rem 1rem;
+		width: 25%;
+	}
+
+	.table-col.legend {
+		display: none;
+	}
+
+	.legend::after {
+		content: '';
+	}
+	
+	.table-col.actions {
+		width: 25%;
+	}
+
+	.actions img {
+		padding: .5rem 1rem;
+	}
+
+	.table-row .table-col a img {
+		padding-bottom: 0;
+		padding-top: 0;
+	}
+}
